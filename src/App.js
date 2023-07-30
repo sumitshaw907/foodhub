@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import { ReactDOM } from "react-dom";
+import Title from "./components/Title";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
+import userContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import store from "./utils/store.js";
 
 function App() {
+  const [user, setUser] = useState({
+    name: "Sumit Kumar Shaw",
+    email: "sumitshaw907@gmail.com",
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="bg-[#FFFFFF] font-sans overflow-x-hidden">
+      <Provider store={store}>
+        <userContext.Provider
+          value={{
+            user: user,
+            setUser: setUser,
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <Title />
+          <Outlet />
+          <Footer />
+        </userContext.Provider>
+      </Provider>
     </div>
   );
 }
