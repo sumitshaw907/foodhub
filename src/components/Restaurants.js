@@ -9,14 +9,14 @@ function Restaurants({ products }) {
   };
   return (
     <div className="flex flex-wrap mx-auto justify-evenly px-8 ">
-      {products?.map((product) => {
+      {products.map((product) => {
         return (
           <Link
-            to={"restaurant/" + product?.info.id}
-            key={product?.info?.id}
+            to={"restaurant/" + product.info.id}
+            key={product.info.id}
             onClick={scrollToTop}
           >
-            <Restaurant {...product?.info} />
+            <Restaurant {...product.info} />
           </Link>
         );
       })}

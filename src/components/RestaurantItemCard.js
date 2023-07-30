@@ -12,7 +12,7 @@ const RestaurantItemCard = (props) => {
       <div className="flex w-11/12 md:w-9/12 mx-auto gap-4 p-5 hover:border">
         <div className="w-9/12">
           <h2 className="font-2xl font-bold text-[#3F4255] my-1">
-            {props.item.card.info.name}
+            {props?.item?.card?.info?.name}
           </h2>
           <p className="text-[#737171] my-1 font-semibold">
             ₹{props?.item?.card?.info?.price / 100}
@@ -25,13 +25,14 @@ const RestaurantItemCard = (props) => {
           <img
             className="w-52 md:h-32 h-24 object-cover"
             src={
-              "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" +
-              props.item.card.info.imageId
+              "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+              props?.item?.card?.info?.imageId
             }
+            alt="food/Dish"
           />
 
           <button
-            onClick={() => handleAddItem(props.item.card)}
+            onClick={() => handleAddItem(props?.item?.card)}
             className=" bg-green-100 text-[#3F4255] hover:bg-green-200 font-semibold p-2 uppercase"
           >
             Add Item+

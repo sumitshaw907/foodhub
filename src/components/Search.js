@@ -6,7 +6,7 @@ const Search = ({ products, setData }) => {
 
   function filterData(searchText, products) {
     const dataFiltered = products.filter((product) => {
-      return product?.data?.name
+      return product.info.name
         .toLowerCase()
         .includes(searchText.toLowerCase());
     });

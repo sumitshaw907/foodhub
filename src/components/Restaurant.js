@@ -18,8 +18,8 @@ export default function Restaurant(props) {
 
         <h3 className="font-semibold mt-3 font-lg">{props.name}</h3>
         <h4 className="text-xs">{props.cuisines.join(", ")}</h4>
-        <h5 className="mt-1 text-sm">{props.minDeliveryTime} MINS</h5>
-        <h5> {props.costForTwoString}</h5>
+        <h5 className="mt-1 text-sm">{props.deliveryTime} MINS</h5>
+        <h5> {props.costForTwo}</h5>
       </div>
     </div>
   );
