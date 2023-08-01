@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Body from "./components/Body";
-import About from "./components/About";
-import Cart from "./components/Cart";
-import Error from "./components/Error";
-import RestaurantMenu from "./components/RestaurantMenu";
-import Home from "./components/Home";
-import Help from "./components/Help";
+import Body from "./src/components/Body";
+import About from "./src/components/About";
+import Cart from "./src/components/Cart";
+import Error from "./src/components/Error";
+import RestaurantMenu from "./src/components/RestaurantMenu";
+import Home from "./src/components/Home";
+import Help from "./src/components/Help";
 
 const appRoute = createBrowserRouter([
   {

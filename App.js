@@ -1,13 +1,13 @@
-import "./App.css";
+//import "./App.css";
 import React, { useState } from "react";
 import { ReactDOM } from "react-dom";
-import Title from "./components/Title";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
+import Title from "./src/components/Title";
+import Body from "./src/components/Body";
+import Footer from "./src/components/Footer";
 import { Outlet } from "react-router-dom";
-import userContext from "./utils/userContext";
+import userContext from "./src/utils/userContext";
 import { Provider } from "react-redux";
-import store from "./utils/store.js";
+import store from "./src/utils/store.js";
 
 function App() {
   const [user, setUser] = useState({

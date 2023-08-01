@@ -13,14 +13,13 @@ const RestaurantMenu = () => {
   async function getRestaurantData() {
     try {
       const data = await fetch(
-        "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5270362&lng=77.13593279999999&restaurantId=" +
+        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=" +
           id +
           "&submitAction=ENTER"
       );
       const json = await data.json();
       const itemCards =
-      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card?.itemCards;
+      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
       setResList(itemCards);
     } catch (error) {
       console.error(`Opps!!! Something went wrong ${error}`);
@@ -34,8 +33,8 @@ const RestaurantMenu = () => {
       <p className="text-xl text-[#3F4255] uppercase font-bold w-11/12 md:w-9/12 mx-auto pl-5 mb-5 mt-32">
         Recommended
       </p>
-      {resList.map((item, index) =>
-        <RestaurantItemCard item={item} key={index} />
+      {resList.map((item) =>
+        <RestaurantItemCard item={item} key={item.card.info.id} />
         )}
     </div>
   );

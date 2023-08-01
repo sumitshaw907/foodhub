@@ -12,7 +12,7 @@ export default function Title() {
   };
 
   return (
-    <div className="flex justify-between  items-center  md:px-14 h-20 mb-4  border-b-[1px]  border-[#D4D7E5]  w-full bg-white fixed z-50">
+    <div className="flex justify-between  items-center  md:px-14 h-20 mb-4  border-b-[1px]  border-[#D4D7E5]  w-full bg-white fixed z-50 top-3">
       <div className="h-20 w-80 px-2 flex items-center ">
         <p className="font-bold text-4xl text-[#3F4255] ">
           F<span className="text-yellow-500">oo</span>d Hub
